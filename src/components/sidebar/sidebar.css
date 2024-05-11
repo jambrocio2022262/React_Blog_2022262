@@ -1,0 +1,37 @@
+/* sidebar.css */
+
+.sidebar {
+    width: 300px; /* Ancho de la barra lateral */
+    background-color: #a0a0a0; /* Color de fondo de la barra lateral (gris oscuro) */
+    padding: 20px;
+    position: fixed; /* Fija el sidebar a la izquierda */
+    top: 0; /* Lo sitúa en la parte superior */
+    left: 0; /* Lo sitúa en el borde izquierdo */
+    bottom: 0; /* Hace que ocupe toda la altura */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical si el contenido es demasiado largo */
+    color: #ffffff; /* Color de texto blanco */
+    display: flex; /* Activar el modelo de caja flexible */
+    flex-direction: column; /* Organizar los elementos en columna */
+    justify-content: center; /* Centrar verticalmente los elementos */
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+    text-align: center; /* Centrar el texto */
+}
+
+.sidebar p {
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto */
+}
+
+.sidebar img {
+    display: block; /* Para que la imagen se muestre como un bloque */
+    margin: 0 auto 20px; /* Margen automático arriba y abajo y centrado horizontal */
+    max-width: 100%; /* Para asegurarse de que la imagen no se extienda más allá del ancho del contenedor */
+}
+
+
+
+
+

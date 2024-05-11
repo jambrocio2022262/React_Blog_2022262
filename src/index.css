@@ -1,17 +1,18 @@
 :root {
   line-height: 1.5;
   font-weight: 400;
- 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
- 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra suave */
+              0 0 20px rgba(255, 165, 0, 0.5); /* Sombra con efecto 3D */
+  overflow: hidden; /* Ocultar cualquier contenido que desborde */
+  background: linear-gradient(135deg, #ff7e5f, #ff4e00); /* Fondo naranja difuminado más fuerte */
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
- 
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -20,21 +21,23 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
- 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
- 
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ffaf60, #ff7e5f);
   }
   a:hover {
-    color: #0b336b;
+    color: #fff;
+    background: linear-gradient(135deg, #ff9f80, #ff5f6d);
   }
   button {
     background-color: #f9f9f9;
   }
 }
+  

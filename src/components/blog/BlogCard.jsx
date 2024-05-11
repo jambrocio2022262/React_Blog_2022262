@@ -1,26 +1,25 @@
-import React, {useState} from "react";
-import '../../styles/blogCard.css'
+import React, { useState } from "react";
+import '../../styles/blogCard.css'; // Importamos el archivo CSS local
 
-export const BlogCard = ({blogs})  =>{
-    console.log('blogs en BlogCard: ',blogs)
+export const BlogCard = ({ blogs }) => {
+    console.log('blogs en BlogCard: ', blogs);
 
-    const [expandedIndex, setExpandedIndex] = useState(null)
+    const [expandedIndex, setExpandedIndex] = useState(null);
 
     const handleExpandedClick = index => {
-        if(expandedIndex === index){
-            setExpandedIndex(null)
-        }else{
-            setExpandedIndex(index)
+        if (expandedIndex === index) {
+            setExpandedIndex(null);
+        } else {
+            setExpandedIndex(index);
         }
-    }
+    };
 
-
-    return(
+    return (
         <div className="blog-card-container">
-            {blogs.map((blog, index) =>(
+            {blogs.map((blog, index) => (
                 <div key={index} className="blog-card">
                     <div>
-                        <img src={blog.imagenUrl} alt="Imagen de blog"/>
+                        <img src={blog.imagenUrl} alt="Imagen de blog" />
                     </div>
                     <div>
                         <label>Title:</label>
@@ -31,15 +30,16 @@ export const BlogCard = ({blogs})  =>{
                         <div>{blog.category}</div>
                     </div>
                     {expandedIndex === index ? (
-                       <div>
+                        <div>
                             <label>Paragraph</label>
                             <div>{blog.paragraph}</div>
-                       </div>
+                        </div>
                     ) : (
                         <button onClick={() => handleExpandedClick(index)}>Más Información...</button>
                     )}
                 </div>
             ))}
         </div>
-    )
-}
+    );
+};
+

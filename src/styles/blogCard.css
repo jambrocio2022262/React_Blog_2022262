@@ -1,82 +1,51 @@
-:root {
-    line-height: 1.5;
-    font-weight: 400;
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  }
-  
-  /* Estilos específicos para las cartas de blog */
-  .blog-card-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    max-width: 800px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centrar el contenedor horizontalmente */
-    padding: 20px; /* Agregar un espacio interior */
-  }
-  
-  .blog-card {
-    background-color: #000000;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    position: relative; /* Agrega posición relativa para alinear la imagen */
-  }
-  
-  .blog-card img {
-    position: absolute; /* Ajusta la posición absoluta para la imagen */
-    top: 0; /* Alinea la imagen arriba */
-    right: 0; /* Alinea la imagen a la derecha */
-    width: 200px; /* Establece el ancho deseado para la imagen */
-    height: auto; /* Mantiene la proporción de aspecto de la imagen */
-    border-radius: 8px; /* Agrega bordes redondeados a la imagen */
-  }
-  
-  .blog-card label {
-    font-weight: bold;
-  }
-  
-  .blog-card div {
-    margin-bottom: 10px;
-  }
-  
-  /* Estilos para el botón "Ver más" */
-  .blog-card button {
-    background-color: #007bff; /* Color de fondo del botón */
-    color: #ffffff; /* Color del texto del botón */
-    border: none; /* Quita el borde del botón */
-    padding: 10px 20px; /* Ajusta el relleno del botón */
-    border-radius: 5px; /* Agrega bordes redondeados al botón */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  }
-  
-  .blog-card button:hover {
-    background-color: #0056b3; /* Cambia el color de fondo al pasar sobre el botón */
-  }
-  
-  /* Estilos para tema claro */
-  @media (prefers-color-scheme: light) {
-    :root {
+/* blogCard.css */
+
+.blog-card-container {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  flex-wrap: wrap; /* Permitir que las cartas se envuelvan en filas */
+}
+
+.blog-card {
+  width: 300px; /* Ancho de la carta */
+  height: auto; /* Permitir que la altura se ajuste automáticamente */
+  margin: 10px; /* Margen entre las cartas */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra suave */
+              0 0 20px rgba(255, 165, 0, 0.5); /* Sombra con efecto 3D */
+  overflow: hidden; /* Ocultar cualquier contenido que desborde */
+  background: linear-gradient(135deg, #ffaf60, #ff7e5f); /* Gradiente de naranja */
+  transition: transform 0.3s ease-in-out; /* Animación al pasar el ratón */
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Efecto de levantamiento al pasar el ratón */
+}
+
+.blog-card img {
+  width: 100%; /* Ancho de la imagen al 100% de la carta */
+  height: auto; /* Altura automática para mantener la proporción */
+  border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
+}
+
+.blog-card-content {
+  padding: 20px; /* Ajustar el espacio interior */
+  color: #000000; /* Color de texto negro */
+}
+
+.blog-card button {
+  background-color: #000000; /* Cambiar el color de fondo del botón a negro */
+  color: #ffffff; /* Color del texto del botón */
+}
+
+/* Estilos para tema claro */
+@media (prefers-color-scheme: light) {
+  :root {
       color: #213547;
       background-color: #ffffff;
-    }
-    a:hover {
-      color: #0b336b;
-    }
   }
+  a:hover {
+      color: #0b336b;
+  }
+}
+
