@@ -3,6 +3,9 @@ import { BlogCard } from '../../components/blog/BlogCard';
 import { NavBar } from '../../components/navbar/NavBar';
 import { getBlogs } from '../../services/';
 import SideBar from '../../components/sidebar/Sidebar'; // Cambiado de SideBar a Sidebar
+import '../../pages/dashbord/dashbordPage.css'
+import { Comentarios } from "../../components/comentarios/Comentarios";
+import { ComentarioLista } from "../../components/listarComentario/ListarComentario";
 
 export const DashbordPage = () => { // Cambiado DashboardPage a DashbordPage
     const [blogs, setBlogs] = useState([]);
@@ -27,9 +30,16 @@ export const DashbordPage = () => { // Cambiado DashboardPage a DashbordPage
 
     return (
         <div>
-            <NavBar />
-            <SideBar />
-            <BlogCard blogs={blogs} />
+            {/*<NavBar />*/}
+            <div className="content">
+                <SideBar />
+                <div className="content-blog-coment">
+                    <BlogCard blogs={blogs} />
+                    <ComentarioLista />
+                    <Comentarios />
+                </div>
+            </div>
+
         </div>
     );
 };

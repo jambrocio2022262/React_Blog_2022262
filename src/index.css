@@ -5,7 +5,6 @@
   color: rgba(255, 255, 255, 0.87);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra suave */
               0 0 20px rgba(255, 165, 0, 0.5); /* Sombra con efecto 3D */
-  overflow: hidden; /* Ocultar cualquier contenido que desborde */
   background: linear-gradient(135deg, #ff7e5f, #ff4e00); /* Fondo naranja difuminado más fuerte */
   font-synthesis: none;
   text-rendering: optimizeLegibility;

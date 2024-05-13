@@ -1,9 +1,12 @@
 /* blogCard.css */
 
 .blog-card-container {
-  display: flex;
-  justify-content: flex-end; /* Alinear a la derecha */
+  display: flex ;
+  /*justify-content: flex-end; /* Alinear a la derecha */
   flex-wrap: wrap; /* Permitir que las cartas se envuelvan en filas */
+  flex-direction: row;
+  overflow-y: scroll;
+
 }
 
 .blog-card {
@@ -13,7 +16,7 @@
   margin: 10px; /* Margen entre las cartas */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Sombra suave */
-              0 0 20px rgba(255, 165, 0, 0.5); /* Sombra con efecto 3D */
+              0 0 20px rgba(241, 228, 203, 0.5); /* Sombra con efecto 3D */
   overflow: hidden; /* Ocultar cualquier contenido que desborde */
   background: linear-gradient(135deg, #ffaf60, #ff7e5f); /* Gradiente de naranja */
   transition: transform 0.3s ease-in-out; /* Animación al pasar el ratón */
@@ -24,7 +27,7 @@
 }
 
 .blog-card img {
-  width: 100%; /* Ancho de la imagen al 100% de la carta */
+  width: 300px; /* Ancho de la imagen al 100% de la carta */
   height: auto; /* Altura automática para mantener la proporción */
   border-radius: 8px 8px 0 0; /* Bordes redondeados solo en la parte superior */
 }
